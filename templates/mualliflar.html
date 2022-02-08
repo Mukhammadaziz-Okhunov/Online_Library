@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar_royahti</title>
+</head>
+<body>
+     <h2>Mualliflar ro'yhati:</h2>
+     {% for i in muallif %}
+     <h3>{{i.ism}} ({{i.yosh}})</h3>
+     <button><a href="/mualliflar/{{i.id}}">O'chirish</a></button>
+     {% endfor %}
+    <br>
+    <br>
+    <form action="/mualliflar/" method="post">{% csrf_token %}
+        <input name="m_ism" placeholder="Muallif ismi">
+        <input name="m_yosh" placeholder="Muallif yoshi">
+        <input name="m_jins" placeholder="Muallif jinsi">
+        <button type="submit">Topshirish</button>
+    </form>
+</body>
+</html>

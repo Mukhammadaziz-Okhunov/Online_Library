@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record</title>
+</head>
+<body>
+ <h2>Recordlar ro'yhati:</h2>
+     {% for i in record %}
+     <h3>{{i.muallif.ism}} ({{i.kitob.nom}})</h3>
+     <button><a href="/recordlar/{{i.id}}">O'chirish</a></button>
+     {% endfor %}
+</body>
+</html>
